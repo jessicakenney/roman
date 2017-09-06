@@ -1,0 +1,17 @@
+{
+  "name": "romantwo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "roman-interface.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserfy": "^1.0.0",
+    "gulp": "^3.9.1",
+    "jasmine": "^2.8.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
