@@ -28,10 +28,7 @@ describe('Roman', function(){
     expect(roman.toRoman("4500")).toEqual("Invalid number, try again");
   });
   it('should apply thouPlace, hunPlace, tenPlace, and onePlace to yield correct roman numeral', function(){
-    // expect(roman.thouPlace("2")).toEqual("MM");
-    // expect(roman.hunPlace("5")).toEqual("D");
-    // expect(roman.tenPlace("0")).toEqual("");
-    // expect(roman.onePlace("0")).toEqual("");
+    
   expect(roman.toRoman("2500")).toEqual("MMD");
   });
 
