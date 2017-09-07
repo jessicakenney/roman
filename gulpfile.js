@@ -1,4 +1,4 @@
-
+var babelify = require("babelify");
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var browserify = require('browserify');
@@ -35,6 +35,9 @@ gulp.task('concatInterface', function() {
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
   return browserify({entries: ['./tmp/allConcat.js']})
+    .transform(babelify.configure({
+      presets: ["es2015"]
+    }))
     .bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./build/js'));

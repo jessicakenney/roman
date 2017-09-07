@@ -1,8 +1,10 @@
-function Roman(color){
-  this.color=color;
+export class Roman {
 
+  constructor(color){
+    this.color=color;
 }
-Roman.prototype.thouPlace=function(userInput){
+
+thouPlace(userInput){
   var output = "";
   if (userInput==="1") {
     output="M";
@@ -14,9 +16,9 @@ Roman.prototype.thouPlace=function(userInput){
     output = "";
   }
   return output;
-};
+}
 
-Roman.prototype.hunPlace=function(userInput){
+hunPlace(userInput){
   var output = "";
   if (userInput==="1") {
     output="C";
@@ -40,9 +42,9 @@ Roman.prototype.hunPlace=function(userInput){
     output = "";
   }
   return output;
-};
+}
 
-Roman.prototype.tenPlace=function(userInput){
+tenPlace(userInput){
   var output = "";
   if (userInput==="1") {
     output="X";
@@ -66,9 +68,9 @@ Roman.prototype.tenPlace=function(userInput){
     output = "";
   }
   return output;
-};
+}
 
-Roman.prototype.onePlace=function(userInput){
+onePlace(userInput){
   var output = "";
   if (userInput==="1") {
     output="I";
@@ -92,8 +94,9 @@ Roman.prototype.onePlace=function(userInput){
     output = "";
   }
   return output;
-};
-Roman.prototype.toRoman=function(userInput){
+}
+
+toRoman(userInput){
   var length = userInput.length;
   var output = "";
   if((userInput<= 0) || (userInput >= 4000) || isNaN(userInput)){
@@ -112,7 +115,6 @@ Roman.prototype.toRoman=function(userInput){
   output = "Invalid number, try again";
   }
   return output;
-};
+}
 
-
-exports.romanModule = Roman;
+}

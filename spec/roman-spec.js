@@ -1,4 +1,5 @@
-var Roman = require('./../js/roman.js').romanModule;
+import {Roman} from './../js/roman.js';
+
 
 describe('Roman', function(){
   var roman;
@@ -28,7 +29,7 @@ describe('Roman', function(){
     expect(roman.toRoman("4500")).toEqual("Invalid number, try again");
   });
   it('should apply thouPlace, hunPlace, tenPlace, and onePlace to yield correct roman numeral', function(){
-    
+
   expect(roman.toRoman("2500")).toEqual("MMD");
   });
 
